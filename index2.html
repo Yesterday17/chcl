@@ -1,0 +1,19 @@
+<html>
+	<head>
+		<script type="text/javascript">
+			function fadd(){
+				var ans=",\""+addform.elements.value+"\"";
+				document.getElementById("opt").innerHTML+=ans;
+				addform.elements.value="";
+				javascript:document.all.elements.focus();
+			}
+		</script>
+	</head>
+	<body>
+		<form name="addform"">
+			<input type="text" name="elements" id="elements"  onkeypress="if(event.keyCode==13){fadd();return false;}" />
+			<input type="button" value="add" name="add" onclick="fadd()" />
+		</form>
+		<p id="opt"></p>
+	</body>
+</html>
